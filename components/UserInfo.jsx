@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { signOut } from "next-auth/react";
 
 const UserInfo = () => {
   return (
@@ -13,7 +14,10 @@ const UserInfo = () => {
         <div>
           Email: <span className="font-bold">najim@gmail.com</span>
         </div>
-        <button className="bg-red-500 px-6 py-2 mt-3 text-white font-bold">
+        <button
+          onClick={() => signOut()}
+          className="bg-red-500 px-6 py-2 mt-3 text-white font-bold"
+        >
           Logout
         </button>
       </div>
